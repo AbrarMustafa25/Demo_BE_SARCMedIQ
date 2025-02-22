@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import VisitView
+from .views import VisitView, UploadCSVView
 
 
 class AppointmentUrls:
@@ -7,6 +7,7 @@ class AppointmentUrls:
     def get_urls():
         urls = [
             path('visit/', VisitView.as_view()),
+            path('upload/', UploadCSVView.as_view()),
         ]
         return urls
  

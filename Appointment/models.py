@@ -9,10 +9,10 @@ class Visit(models.Model):
     class Meta:
         unique_together = ('patient', 'date', 'reason')
 
-    def save(salf, *args, **kwargs):
-        try:
-            super.save(*args, **kwargs)
-            print(str(*args))
-        except IntegrityError:
-            raise ""
+    # def save(salf, *args, **kwargs):
+    #     try:
+    #         super.save(*args, **kwargs)
+    #         print(str(*args))
+    #     except IntegrityError:
+    #         raise ""
         
