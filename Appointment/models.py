@@ -1,7 +1,6 @@
 from django.db import models, IntegrityError
 from Patient.models import Patient
 
-# Create your models here.
 class Visit(models.Model):
     patient = models.ForeignKey(Patient, on_delete=models.PROTECT, related_name="patient_visit")
     date = models.DateField()
@@ -12,7 +11,8 @@ class Visit(models.Model):
 
     def save(salf, *args, **kwargs):
         try:
-            pass
+            super.save(*args, **kwargs)
+            print(str(*args))
         except IntegrityError:
-            raise
+            raise ""
         
