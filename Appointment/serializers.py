@@ -1,6 +1,6 @@
 from rest_framework import serializers
 from .models import Visit
-from Appointment.serializers import PatientSerializer
+from Patient.serializers import PatientSerializer
 
 class VisitSerializer(serializers.ModelSerializer):
     patient = PatientSerializer(read_only=True)
