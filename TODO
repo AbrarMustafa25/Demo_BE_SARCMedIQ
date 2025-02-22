@@ -1,0 +1,9 @@
+##  Users can:
+    - View patients and visits in a table
+    - Table is sorted by visit date, ascending
+    - Select multiple files with a file chooser
+## Upload the selected file(s) by clicking the "upload" button
+    Uploaded files will be in CSV format, with the structure of the two files attached to this task.
+    Files contain past patients and visits
+    A duplicate record has the same patient mr number, visit date, and reason. Show a message if there are duplicates
+        
