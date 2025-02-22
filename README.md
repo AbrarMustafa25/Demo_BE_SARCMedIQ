@@ -21,5 +21,3 @@ python3 manage.py migrate
 
 # 7. Run the server
 python3 manage.py runserver 0:8000
-
-python3 manage.py startapp Patient
