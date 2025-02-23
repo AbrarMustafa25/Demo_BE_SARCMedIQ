@@ -37,7 +37,10 @@ class UploadCSVView(generics.GenericAPIView):
             csv_file = TextIOWrapper(file, encoding='utf-8')
             reader = csv.DictReader(csv_file)
         except Exception as exception:
-            return Response({"error": f"{str(exception)}"})
+            return Response(
+                {"error": f"{str(exception)}"},
+                status=status.HTTP_400_BAD_REQUEST,
+            )
 
         for row in reader:
             try:
